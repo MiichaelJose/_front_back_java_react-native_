@@ -1,0 +1,30 @@
+https://blog.expo.dev/sunsetting-the-web-ui-for-expo-cli-ab12936d2206
+
+expo init "nome"
+
+cd "nome"
+
+expo start / npm start
+
+// INSTALL styled-components 
+
+npm install styled-components --force
+
+// TIPANDO O STYLED NO REACT NATIVE
+
+npm install @types/styled-components-react-native --force
+
+npm install expo-font @expo-google-fonts/roboto --force
+
+npm install @expo-google-fonts/arvo --force
+
+
+
+npm install expo-splash-screen --force  
+
+
+consumir API com axios
+
+npm install axios --force
+
+expo install @shopify/flash-list
