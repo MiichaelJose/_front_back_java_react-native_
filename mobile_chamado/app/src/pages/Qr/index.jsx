@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import api from "../../services/api";
+
 import { StyleSheet } from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
 
@@ -9,7 +11,14 @@ import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 
 export default function Qr({ navigation }) {
+  let [dataFull, setDataFull] = useState([]);
   const [hasPermission, setHasPermission] = useState(null);
+  const [scanned, setScanned] = useState(false);
+
+  async function getCalled(id) {
+    const { data } = await api.get("/listchamado/"+id);
+    setDataFull(data);
+  }
 
   useEffect(() => {
     const getBarCodeScannerPermissions = async () => {
@@ -21,11 +30,14 @@ export default function Qr({ navigation }) {
   }, []);
 
   const handleBarCodeScanned = ({ type, data }) => {
-    
-    
+    setScanned(true)
+
     if(data != '' && data != null) {
-        console.log(data);
-        navigation.navigate("Called", data)
+      getCalled(data);
+
+      if(dataFull != '[]') {
+        navigation.navigate('Called', dataFull)
+      }
     }else {
         alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     }
@@ -45,7 +57,7 @@ export default function Qr({ navigation }) {
       </Header>
       <ViewQr>
         <BarCode
-          onBarCodeScanned={handleBarCodeScanned}
+          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
           style={StyleSheet.absoluteFillObject}
         />
       </ViewQr>

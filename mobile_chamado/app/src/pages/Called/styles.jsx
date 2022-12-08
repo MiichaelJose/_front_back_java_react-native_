@@ -11,7 +11,7 @@ export const Container = styled.View`
 `;
 
 export const Header = styled.View`
-    height: 20%;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -23,7 +23,15 @@ export const Content = styled.View`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+`;
+
+export const Bottom = styled.View`
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 `;
 
@@ -33,19 +41,21 @@ export const Title = styled.Text`
     font-family: 'Roboto_700Bold';
 `;
 
+export const SubTitle = styled.Text`
+    font-family: "Roboto_700Bold_Italic";
+    margin-bottom: 15px;
+`;
+
 export const BoxText = styled.View`
-    height: 100;
-    width: 90%;
-    margin-top: 5%;
+    width: 80%;
+    margin-inline: auto;
     flex-direction: column;
     justify-content: space-between;
 `;
 
 export const BoxStatus = styled.View`
-    height: 100;
-    width: 90%;
+    width: 80%;
     display: flex;
-    margin-top: 5%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -64,4 +74,14 @@ export const BoxRight = styled.View`
 
 export const PickerStyle = styled(Picker)`
     background-color: #e0e0e0;
+`;
+
+export const TextDesc = styled.ScrollView`
+    overflow-y: scroll;
+    height: 105px;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    padding: 15px;
+    border: 2px solid #8f5cd0;;
+    margin-top: 5px;
 `;

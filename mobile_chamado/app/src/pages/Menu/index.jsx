@@ -66,7 +66,7 @@ export default function Menu({ navigation }) {
         />
       </Content>
       <AreaButton>
-        <Button onPress={() => navigation.navigate('Called')}>escanear Qr</Button>
+        <Button onPress={() => navigation.navigate('Qr')}>escanear Qr</Button>
       </AreaButton>
     </Container>
   );
