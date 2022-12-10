@@ -7,6 +7,7 @@ import { Container, H1, Content } from './styles';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { Text } from '../../components/Text';
+import { Alert } from 'react-native';
 
 export default function Signin({ navigation }) {
   let [cpf, setCpf] = useState("");
@@ -22,7 +23,9 @@ export default function Signin({ navigation }) {
     api.post("/login", data)
     .then((response) => {
       if(response.status == 202) {
-        navigation.navigate('Menu');
+        if(response.data.cargo == 'tecnico') {
+          navigation.navigate('Menu');
+        }     
       }
     })
     .catch((err) => {
@@ -36,12 +39,12 @@ export default function Signin({ navigation }) {
       <Content behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <H1>Login</H1>
         {
-          alert ? <Text color={'red'}>dados incorretos!</Text> : null
+          alert ? <Text color={'red'}>dados incorretos ou você não tem acesso!</Text> : null
         }
         <Input placeholder="cpf" onChangeText={setCpf} />
         <Input placeholder="senha" secureTextEntry={true} onChangeText={setPassword} />
 
-        <Button onPress={() => navigation.navigate('Menu')}>login</Button>
+        <Button onPress={() => handleSingIn()}>login</Button>
       </Content>
     </Container>
   );

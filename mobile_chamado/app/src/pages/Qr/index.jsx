@@ -62,7 +62,7 @@ export default function Qr({ navigation }) {
         />
       </ViewQr>
       <BoxButton>
-          <Button onPress={() => navigation.navigate('Menu')}>voltar</Button>
+          <Button onPress={() => { navigation.navigate('Called', dataFull) }}>voltar</Button>
       </BoxButton>
     </Container>
   );

@@ -31,6 +31,7 @@ export const ViewQr = styled.View`
     height: 80%;
     justify-content: center;
     display: flex;
+    background-color: #8a8a8a;
 `;
 
 export const BoxButton = styled.View`
