@@ -1,0 +1,85 @@
+.content{
+    justify-content: center;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-column-gap: 100px;
+    grid-row-gap: 40px;
+   
+} 
+
+.inputs div{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inputs div span{
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inputs div input{
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+    -webkit-appearance: none;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.inputs div input:checked{
+    background-color: var(--title-color);
+    border: 2px solid #000;
+}
+
+/* .select{
+    width: 400px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    color: #0000007e;
+    font-size: 20px;
+    font-weight: bold;
+} */
+
+.btns{
+    display: flex;
+}
+
+button{
+    margin: 100px 50px 0;
+}
+
+@media(max-width: 1000px){
+    .title{
+        font-size: 4em;
+    }
+
+    .inputs{
+        display: grid;
+        grid-template-columns: 250px;
+        grid-row-gap: 4px;
+       
+    } 
+
+    .btns{
+        flex-direction: column-reverse;
+    }
+
+    button{
+        margin: 0 0 20px;
+    }
+}

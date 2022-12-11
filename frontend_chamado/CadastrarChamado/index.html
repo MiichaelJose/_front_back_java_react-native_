@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href="../global/img/chama.png">
+    <link rel="stylesheet" href="../global/style/global.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Chamado</title>
+</head>
+<body>
+    <div class="myContainer">
+        <h1 class="title">Chamado</h1>
+
+        <div class="mid">
+            <div class="content">
+                <div class="inputs">
+                    <input type="text" id="produto" placeholder="PRODUTO">
+                    <input type="text" id="marca" placeholder="MARCA">
+                    <input type="text" id="sn" placeholder="SERIAL NUMBER">
+                    <select id="func" name="select">
+                        <option disabled selected value="0">TECNICO RESPONSAVEL</option>
+                    </select>
+                    <input type="text" id="cor" placeholder="COR">
+                    <input type="text" id="tel" placeholder="TELEFONE DO CLIENTE" maxlength="15">
+                    <select id="opt" name="opt">
+                        <option disabled selected value="0">STATUS</option>
+                        <option value="Analise">Analise</option>
+                        <option value="Andamento">Andamento</option>
+                        <option value="Urgente">Urgente</option>
+                        <option value="Concluido">Concluido</option>
+                    </select>
+                    <input type="number" id="orcamento" placeholder="ORÇAMENTO">
+                    <textarea name="problem" id="descricao" rows="7" cols="" placeholder="DESCRIÇÃO DO PROBLEMA..."></textarea>
+                </div>
+                <div class="btns">
+                    <button onclick="backpg()">
+                        <span class="text">VOLTAR</span>
+                    </button>
+                    <button onclick="cadastrar()">
+                        <span class="text">CADASTRAR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+        <div class="Modal-content">
+          <div id="qrcode"></div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="../global/script/qrcode.js"></script>
+<script src="../global/script/global.js"></script>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,105 @@
+.pesquisa{
+    margin-bottom: 15px;
+}
+
+input[type="search"]{
+    border: none;
+    background-color: #eee;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.table{
+    height: 65%;
+    width: 90vw;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.table::-webkit-scrollbar{
+    width: 0;
+}
+
+table{
+    border-collapse: collapse;
+    max-height: 95%;
+    width: 100%;
+}
+
+thead tr{
+    background-color: var(--title-color);
+    color: #fff;
+}
+
+thead tr th{
+    padding: 10px;
+    font-size: 18px;
+}
+
+tbody td{
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.col1, .chamado{
+    width: 5%;
+    text-align: center;
+}
+
+.col2, .prod{
+    width: 45%;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.col3, .sn{
+    width: 20%;
+    text-align: center;
+}
+
+.col4, .tec{
+    width: 15%;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.col5, .status{
+    width: 10%;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--detail-color);
+}
+
+.model{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    .pesquisa{
+        margin: 50px 0 -30px 0;
+    }
+
+    .title{
+        font-size: 4em;
+    }
+
+    button{
+        margin: 0 0 20px;
+    }
+
+    table{
+        font-size: 10px;
+    }
+}
