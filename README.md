@@ -1,68 +1,69 @@
 # front_back_java_react-native
 
-Projeto full-stack com **backend em Java** e **frontend mobile em React Native** (aplicativo) para comunicação entre os dois lados, exibição de dados, etc.
+Projeto **full-stack** composto por três camadas:
 
-## 📖 Visão geral
+1. **Backend em Java (API REST)**  
+2. **Frontend Web com HTML e CSS padrão**  
+3. **Aplicativo Mobile em React Native**  
 
-Este repositório contém tanto o backend (servidor Java / API) quanto o frontend mobile (React Native) para um aplicativo que consome os dados desse backend. O objetivo é demonstrar integração, autenticação, rotas, comunicação via API REST, etc.
+O objetivo é demonstrar como integrar diferentes tecnologias consumindo a mesma API Java.
 
-## 🧩 Componentes
+---
 
-- **Backend (Java / API)**: Parte responsável por fornecer endpoints REST, lógica de negócios, acesso ao banco de dados, autenticação, etc.  
-- **Frontend (React Native)**: Aplicativo móvel que consome a API do backend para exibir dados, permitir operações CRUD etc.
+## 📖 Visão Geral
 
-## 🚀 Tecnologias / Ferramentas
+Este sistema foi desenvolvido para praticar e demonstrar integração entre **Java no backend**, uma aplicação web simples com **HTML e CSS** no frontend e um aplicativo mobile em **React Native**, que também consome a API do backend.
 
-### Backend
+---
 
-- Java (versão compatível)  
-- Framework Java para API (Spring Boot, JAX-RS, ou outro — conforme sua implementação)  
-- ORM / JPA / Hibernate  
-- Banco de dados relacional (MySQL, PostgreSQL, etc.)  
-- Maven ou Gradle (ou outro gerenciador de dependências)  
+## 🧩 Funcionalidades
 
-### Frontend (React Native)
+- **Backend (Java API)**  
+  - CRUD de entidades (ex: usuários, veículos, produtos etc.)  
+  - Exposição de endpoints REST  
+  - Conexão com banco de dados relacional  
+  - Autenticação / regras de negócio  
 
-- React Native  
-- JavaScript ou TypeScript  
-- Axios / fetch para comunicação HTTP  
-- Navegação (React Navigation ou similar)  
-- Estado de aplicativo (Context API, Redux ou outro)  
-- Estilização (StyleSheet, Styled Components etc.)
+- **Frontend Web (HTML + CSS)**  
+  - Interface simples em HTML + CSS puro  
+  - Consome dados da API via fetch/JavaScript  
+  - Exibição de listagens e formulários  
+
+- **Mobile (React Native)**  
+  - Aplicativo mobile que consome a mesma API  
+  - Tela inicial, listagens e detalhes  
+  - Navegação entre telas (React Navigation)  
+
+---
+
+## 🛠️ Tecnologias
+
+- **Backend**: Java (Spring Boot ou equivalente), JPA/Hibernate, Maven/Gradle  
+- **Frontend Web**: HTML5, CSS3, JavaScript vanilla  
+- **Mobile**: React Native, Axios/fetch API, React Navigation  
+- **Banco de dados**: MySQL / PostgreSQL (ajustar conforme projeto)  
+
+---
 
 ## ⚙️ Pré-requisitos
 
-### Backend
-
-- JDK instalado  
-- Maven / Gradle (ou ferramenta equivalente)  
+- JDK 11+  
+- Node.js (para rodar o React Native)  
+- npm ou yarn  
+- Emulador Android/iOS ou dispositivo físico  
 - Banco de dados configurado  
 
-### Frontend
+---
 
-- Node.js  
-- npm ou yarn  
-- Ambiente de desenvolvimento React Native (emulador Android / iOS ou dispositivo físico)  
+## 🚀 Instalação e Execução
 
-## 🛠️ Instalação & Execução
-
-### Backend
+### 1. Backend (Java API)
 
 ```bash
-# Clone o repositório
 git clone https://github.com/MiichaelJose/_front_back_java_react-native_.git
+cd _front_back_java_react-native_/backend
 
-cd _front_back_java_react-native_
-
-# Entre na pasta do backend (por exemplo, backend/)
-cd backend
-
-# Instale / compile
-mvn install
-# ou
-gradle build
-
-# Rode a aplicação
+# Compile e rode
 mvn spring-boot:run
 # ou
-java -jar target/seu-backend.jar
+gradle bootRun
